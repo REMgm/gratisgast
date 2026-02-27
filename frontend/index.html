@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratis Gast | AMEX Platinum in Nederland</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        
+        /* AMEX Blue */
+        :root {
+            --amex-blue: #006FCF;
+            --amex-dark: #00175A;
+            --gold: #D4AF37;
+            --light-gray: #f5f5f5;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 23, 90, 0.85) 0%, rgba(0, 111, 207, 0.85) 100%), url('images/banner.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--amex-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--amex-dark);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .hero-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Points Banner */
+        .points-banner {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+        }
+        
+        .points-banner strong {
+            color: var(--amex-blue);
+            font-size: 1.3rem;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+            border-left: 4px solid var(--amex-blue);
+        }
+        
+        .intro p {
+            margin-bottom: 1rem;
+        }
+        
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Section Cards */
+        .section-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-card h2 {
+            color: var(--amex-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-card h3 {
+            color: var(--amex-blue);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .section-card p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: var(--amex-blue);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--amex-dark);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin: 3rem -1.5rem -2rem;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section h2 span {
+            color: var(--gold);
+        }
+        
+        .points-options {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        
+        .point-option {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .point-option strong {
+            color: var(--gold);
+        }
+        
+        .main-cta {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--amex-dark);
+            padding: 1.25rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+        
+        .main-cta:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/logo.png" alt="Gratis Gast Logo" class="hero-logo">
+        <div class="hero-badge">🇳🇱 GratisGast.nl</div>
+        
+        <h1>120.000 punten.<br><span>Jij krijgt ze. Ik ook.</span></h1>
+        
+        <p class="hero-subtitle">Geen marketingpraat. Gewoon wat ik zelf meemaak met de AMEX Platinum in Nederland — bakker uitgezonderd.</p>
+        <a href="https://americanexpress.com/nl-nl/referral/platinum?ref=rEMCOVFozu&XL=MIANS" class="hero-cta">🎯 Ik wil die 120.000 punten</a>
+        <p class="hero-note">Geen spam, geen belletjes. Gewoon een kaart die binnen 5 dagen in je brievenbus ligt.</p>
+    </section>
+    
+    <!-- Email Capture Section -->
+    <div style="background: #fffbe6; padding: 2rem 1.5rem; text-align: center; border-top: 3px dashed var(--gold); border-bottom: 3px dashed var(--gold);">
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">📧 <strong>Wil je meer gratis tips?</strong></p>
+        <p style="color: #666; margin-bottom: 1.5rem;">Ik stuur een mail als ik iets nieuws ontdek. Geen spam, alleen als het echt de moeite waard is.</p>
+        
+        <form id="subscribe-form" class="email-form" style="max-width: 400px; margin: 0 auto; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+            <input type="email" id="email-input" placeholder="jouw@email.nl" required style="flex: 1; min-width: 200px; padding: 0.75rem 1rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem;">
+            <button type="submit" id="submit-btn" style="background: var(--amex-blue); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Op de lijst! 🚀</button>
+        </form>
+        
+        <p id="form-message" style="font-size: 0.9rem; margin-top: 1rem; min-height: 1.5rem;"></p>
+    </div>
+    
+    <script>
+        const API_URL = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3000/api' 
+            : 'https://gratisgast-api.up.railway.app/api';
+        
+        document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            const btn = document.getElementById('submit-btn');
+            const msg = document.getElementById('form-message');
+            
+            btn.disabled = true;
+            btn.textContent = 'Even wachten...';
+            
+            try {
+                const res = await fetch(`${API_URL}/subscribe`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, source: 'website' })
+                });
+                
+                if (res.ok) {
+                    msg.innerHTML = '<span style="color: green;">✅ Je bent op de lijst! Check je inbox.</span>';
+                    document.getElementById('email-input').value = '';
+                } else {
+                    msg.innerHTML = '<span style="color: orange;">⚠️ Oeps, iets ging mis. Probeer het nog eens.</span>';
+                }
+            } catch (err) {
+                msg.innerHTML = '<span style="color: red;">❌ Server error. Mail me direct: gast@gratisgast.nl</span>';
+            }
+            
+            btn.disabled = false;
+            btn.textContent = 'Op de lijst! 🚀';
+        });
+    </script>
+    
+    <!-- Points Banner -->
+    <div class="points-banner">
+        <strong>🎁 120.000 Membership Rewards punten</strong> bij aanvraag via deze link — dat is een retourtje business class naar New York. Of 5 weekendjes weg. Jouw keuze.
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Intro -->
+        <div class="intro">
+            <p><strong>Hoi, ik ben Gast.</strong> Niet rijk, niet bijzonder. Gewoon iemand die ontdekte dat je met de juiste kaart <em>gratis</em> dingen krijgt die anderen betalen.</p>
+            
+            <p>De American Express Platinum? Die is voor mensen in witte linnen pakken op een strand, toch? Nee dus. Ik woon in Nederland, werk hier, doe mijn boodschappen hier. En ik haal deze kaart bijna dagelijks uit mijn portemonnee.</p>
+            
+            <p>Hier vertel ik wat ik meemaak — waar het werkt, waar het niet werkt (bakker, ik kijk naar jou), en hoe jij ook gratis kunt krijgen wat anderen betalen.</p>
+            
+            <p><em>Waarom? Jij krijgt 120.000 punten. Ik ook. Win-win. Dat is de Gratis Gast filosofie.</em></p>
+        </div>
+        
+        <!-- Section 1: Daily Life -->
+        <article class="section-card">
+            <div class="section-icon">🛒</div>
+            <h2>Het leven met een Platinum</h2>
+            <p><strong>Waar het wél werkt (meer dan je denkt):</strong></p>
+            <p>Albert Heijn Online? Check. Jumbo? Check. Bol.com, Coolblue, Zalando, IKEA — vanzelfsprekend. Shell is mijn vaste station. Punten verdienen terwijl ik benzine tank — waarom niet? Het voelt alsof je iets terugkrijgt van iets waar je toch al niet blij mee bent.</p>
+            
+            <p>McDonald's neemt hem ook. Handig voor die 2-uur-'s-nachts-momenten. Ja, ik gebruik mijn Platinum Card voor een Big Mac. Wees niet jaloers.</p>
+            
+            <div class="highlight-box">
+                <strong>🔧 De bakker-workaround:</strong><br>
+                De bakker om de hoek? Die kijkt me aan alsof ik een creditcard uit 1987 probeer te gebruiken. Daar heb ik mijn ING-pas voor. Of mijn Curve-kaart — die koppelt aan mijn AMEX en werkt wél overal. Dat verandert alles.
+            </div>
+            
+            <p><strong>Het moment van twijfel:</strong> Je staat bij de kassa. Je ziet die blauwe kaart in je portemonnee. Denkt: <em>gaat dit wel?</em> De eerste keer dat ik verrast werd? De HEMA. Had 'm niet verwacht, maar ze namen hem gewoon. Sindsdien probeer ik het overal.</p>
+            
+            <p>Werkt het niet? ING-pas erbij. Twee kaarten, geen drama. Behalve op de markt op zaterdag. Daar ben ik nog steeds die gozer met twee pasjes.</p>
+        </article>
+        
+        <!-- Section 2: Dining -->
+        <article class="section-card">
+            <div class="section-icon">🍽️</div>
+            <h2>Eten in Nederland met €150 credit</h2>
+            <p>Die €150 dining credit klinkt alsof je elke dag gratis kunt eten. Spoiler: dat is niet zo. Maar het is wel de moeite als je het slim speelt.</p>
+            
+            <h3>📍 Mr. Porter, Amsterdam</h3>
+            <p>Steakhouse in het W Amsterdam. Rekening: <span class="price-tag">€180 voor twee</span>. Credit gebruikt: €75. <strong>Echt betaald: €105.</strong></p>
+            <p>Voor €105 hadden we niet beter kunnen eten in Amsterdam. En we hoefden niet zelf af te wassen.</p>
+            
+            <h3>📍 Fitzgerald, Amsterdam</h3>
+            <p>Lunch aan de Amstel. Rekening: <span class="price-tag">€95 voor twee</span>. Credit gebruikt: €47,50. <strong>Echt betaald: €47,50.</strong></p>
+            <p>Voor minder dan €50 hadden we nergens anders in Amsterdam zo goed gegeten. Of thuis op de bank met Netflix. Maar dit was beter.</p>
+            
+            <div class="highlight-box">
+                <strong>⚠️ De catch:</strong><br>
+                Je moet reserveren via de AMEX-app. Niet gewoon binnenlopen. Ik heb het één keer vergeten — toen telde het niet mee. €75 weg. Mijn eigen schuld, maar toch irritant.
+            </div>
+        </article>
+        
+        <!-- Section 3: Privium -->
+        <article class="section-card">
+            <div class="section-icon">✈️</div>
+            <h2>Privium zonder de rij</h2>
+            <p>Het eerste wat mensen zeggen: "€415 voor Privium? Dat is duur." Ja, als je het apart koopt. Maar het zit in je Platinum Card.</p>
+            
+            <p><strong>En eerlijk:</strong> het is de enige reden dat ik de kaart houd, zelfs als ik een jaar niet vlieg. Ik weet dat het er is. Dat gevoel van superioriteit? Onbetaalbaar.</p>
+            
+            <img src="images/gast-luxe.png" alt="Gratis Gast leeft zijn beste leven" style="width: 100%; border-radius: 12px; margin: 1.5rem 0;">
+            
+            <h3>Mijn routine</h3>
+            <p>Ik kom aan op Schiphol. Loop naar de Privium-locatie. Scan mijn pas. Ben binnen 5 minuten door security. Geen rij, geen stress, geen "haal alles uit je tas" gedoe.</p>
+            
+            <p>Bij terugkomst: zelfde verhaal. Terwijl de rest in de rij staat te zuchten, ben ik al op weg naar de trein. Soms loop ik expres langzamer om het langer te laten duren.</p>
+            
+            <div class="highlight-box">
+                <strong>🎯 Wanneer het écht telt:</strong><br>
+                Zomervakantie: 45+ minuten rij → 5 minuten met Privium.<br>
+                Vroege vluchten: geen zin om nog eerder op te staan.<br>
+                Vrijdagmiddag spitsuur: iedereen wil weg. Ik niet in de rij.
+            </div>
+        </article>
+        
+        <!-- Section 4: Insurance -->
+        <article class="section-card">
+            <div class="section-icon">🛡️</div>
+            <h2>Verzekerd zonder gedoe</h2>
+            <p>Ik ben sceptisch over verzekeringen. Meestal is het papierwerk, uitzonderingen, en "dat valt helaas niet onder de dekking" — alsof ze een sport maken van je claim weigeren.</p>
+            
+            <p>Maar de AMEX travel insurance heeft me twee keer gered.</p>
+            
+            <h3>🌡️ Incident 1: Gestrand in Athene (hittegolf)</h3>
+            <p>Vlucht geannuleerd door extreme hitte. 40°C, vliegtuigen konden niet opstijgen. Ik zat vast met mijn partner in een stad waar het asfalt smolt. Romantisch, maar niet op deze manier.</p>
+            
+            <p><strong>Kosten:</strong> Extra hotel €180 + maaltijden €85 + nieuwe vlucht €340 = <span class="price-tag">€605</span></p>
+            <p><strong>AMEX:</strong> Volledig vergoed. Binnen 10 dagen. Geen telefoongesprekken. Geen "we kijken ernaar." Gewoon geld terug.</p>
+            
+            <h3>🧳 Incident 2: Bagage vertraagd (Lissabon)</h3>
+            <p>Koffer kwam 3 dagen later aan. Op vakantie zonder kleren. Drie dagen in dezelfde onderbroek is niet mijn idee van een goede tijd, ook niet in Lissabon.</p>
+            <p><strong>Kosten:</strong> Nooduitgaven €240 → <strong>€200 vergoed</strong> (max voor bagagevertraging).</p>
+        </article>
+        
+        <!-- Section 5: Invisible Benefits -->
+        <article class="section-card">
+            <div class="section-icon">✨</div>
+            <h2>De onzichtbare voordelen</h2>
+            <p>Sommige voordelen klinken als marketingpraat. "Exclusieve voordelen!" "VIP-behandeling!" Tot je ze écht gebruikt.</p>
+            
+            <h3>🏨 Hotel status (Fine Hotels + Resorts)</h3>
+            <p>Conservatorium Hotel, Amsterdam — ouders 25-jarig huwelijk. Boekte standaard kamer, kregen upgrade naar junior suite. Late checkout zodat ze niet om 11:00 de kamer uit hoefden (mijn vader is 70, die heeft tijd nodig).</p>
+            
+            <p>€150 hotel credit gebruikt voor diner. Ze dachten dat ik rijk was. Ik liet ze maar denken.</p>
+            
+            <div class="highlight-box">
+                <strong>💳 Extra kaarten voor vrienden</strong><br>
+                1 extra Platinum voor je partner. 4 Green Cards voor vrienden. Zij verdienen punten, jij verdienen punten op hun uitgaven. Win-win.<br><br>
+                <em>Catch: jij bent verantwoordelijk voor hun uitgaven. Vertrouw alleen mensen die je écht kent. Of mensen met wie je zwartmateriaal hebt.</em>
+            </div>
+            
+            <h3>🤵 Concierge (voor als je lui bent)</h3>
+            <p>24/7 telefoonnummer. Zij regelen dingen voor je. Restaurant in Parijs volgeboekt? Zij krijgen een tafel. Cadeau naar Canada versturen? Zij regelen het. Kapotte koffer op vakantie? Nieuwe binnen 4 uur.</p>
+            <p>Ik gebruik het als ik geen zin heb om zelf te zoeken. Of gewoon omdat ik lui ben en iemand anders het werk wil laten doen.</p>
+        </article>
+    </div>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Klaar voor <span>120.000 punten</span>?</h2>
+        <p>Dat is niet "wat punten". Dat is:</p>
+        
+        <div class="points-options">
+            <div class="point-option">
+                ✈️ <strong>Business class naar New York</strong> (retour, 100k punten)
+            </div>
+            <div class="point-option">
+                🗼 <strong>5 weekendjes Parijs</strong> (elk ~15-20k punten)
+            </div>
+            <div class="point-option">
+                💶 <strong>€600+ terugboeken</strong> als statement credit
+            </div>
+        </div>
+        
+        <a href="https://americanexpress.com/nl-nl/referral/platinum?ref=rEMCOVFozu&XL=MIANS" class="main-cta">🚀 Geef me die 120.000 punten</a>
+        
+        <img src="images/gast-huis.png" alt="Gratis Gast thuis" style="width: 100%; max-width: 600px; border-radius: 12px; margin: 2rem auto 0; display: block;">
+        
+        <p style="margin-top: 1rem; opacity: 0.8;">Binnen 5 dagen in je brievenbus. Geen gedoe.</p>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>🎯 <strong>Gratis Gast</strong> — Waarom betalen als het gratis kan?</p>
+        <p style="margin-top: 0.5rem;">Ik zoek de beste deals. Jij pakt ze mee. Iedereen happy.</p>
+        
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #999;">🇳🇱 Gemaakt in Nederland, voor Nederlanders die slim willen leven</p>
+        
+        <p style="margin-top: 1rem; font-size: 0.75rem;">
+            Geen financieel advies. Ik vertel gewoon wat ik zelf doe.<br>
+            American Express is een handelsmerk van American Express. Deze site is niet gelieerd aan AMEX.
+        </p>
+    </footer>
+</body>
+</html>
