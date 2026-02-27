@@ -576,58 +576,6 @@
         <p style="margin-top: 1.5rem; opacity: 0.8;">Binnen 5 dagen in je brievenbus. Geen gedoe.</p>
     </section>
     
-    <!-- Email Section -->
-    <section class="email-section">
-        <h3>📧 Wil je meer Gast-wijsheid?</h3>
-        <p>Ik stuur een mail als ik iets nieuws ontdek. Geen spam, alleen als het echt de moeite waard is.</p>
-        
-        <form id="subscribe-form" class="email-form">
-            <input type="email" id="email-input" placeholder="jouw@email.nl" required>
-            <button type="submit">Op de lijst! 🚀</button>
-        </form>
-        
-        <p id="form-message" style="margin-top: 1rem; min-height: 1.5rem; color: #666;"></p>
-    </section>
-    
-    <script>
-        const API_URL = window.location.hostname === 'localhost' 
-            ? 'http://localhost:3000/api' 
-            : 'https://gratisgast-api.up.railway.app/api';
-        
-        document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email-input').value;
-            const btn = e.target.querySelector('button');
-            const msg = document.getElementById('form-message');
-            
-            btn.disabled = true;
-            btn.textContent = 'Even wachten...';
-            
-            try {
-                const res = await fetch(`${API_URL}/subscribe`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, source: 'website' })
-                });
-                
-                if (res.ok) {
-                    msg.innerHTML = '✅ Je bent op de lijst! Check je inbox.';
-                    msg.style.color = 'green';
-                    document.getElementById('email-input').value = '';
-                } else {
-                    msg.innerHTML = '⚠️ Oeps, iets ging mis. Probeer het nog eens.';
-                    msg.style.color = 'orange';
-                }
-            } catch (err) {
-                msg.innerHTML = '❌ Server error. Mail me direct: gast@gratisgast.nl';
-                msg.style.color = 'red';
-            }
-            
-            btn.disabled = false;
-            btn.textContent = 'Op de lijst! 🚀';
-        });
-    </script>
-    
     <!-- Footer -->
     <footer>
         <img src="images/logo.png" alt="Gratis Gast" class="footer-logo">
